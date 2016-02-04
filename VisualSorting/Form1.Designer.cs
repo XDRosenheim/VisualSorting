@@ -31,6 +31,9 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPillarAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOfPillars)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +77,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPillarAdd);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numOfPillars);
             this.groupBox1.Controls.Add(this.btnAddPillar);
             this.groupBox1.Controls.Add(this.btnReset);
@@ -110,7 +115,7 @@
             // 
             // btnAddPillar
             // 
-            this.btnAddPillar.Location = new System.Drawing.Point(6, 48);
+            this.btnAddPillar.Location = new System.Drawing.Point(9, 19);
             this.btnAddPillar.Name = "btnAddPillar";
             this.btnAddPillar.Size = new System.Drawing.Size(97, 23);
             this.btnAddPillar.TabIndex = 4;
@@ -140,17 +145,54 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(339, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Name of algorythm + # of iterations + # of comparisons + Time elapsed";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 310);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "PillarsDrawn: ";
+            // 
+            // btnPillarAdd
+            // 
+            this.btnPillarAdd.Location = new System.Drawing.Point(9, 48);
+            this.btnPillarAdd.Name = "btnPillarAdd";
+            this.btnPillarAdd.Size = new System.Drawing.Size(97, 23);
+            this.btnPillarAdd.TabIndex = 7;
+            this.btnPillarAdd.Text = "Add pillar";
+            this.btnPillarAdd.UseVisualStyleBackColor = true;
+            this.btnPillarAdd.Click += new System.EventHandler(this.btnPillarAdd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1527, 740);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sorting visualizer";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOfPillars)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,6 +205,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnAddPillar;
         private System.Windows.Forms.NumericUpDown numOfPillars;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPillarAdd;
     }
 }
 
